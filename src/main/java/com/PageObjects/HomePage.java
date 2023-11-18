@@ -3,6 +3,10 @@ package com.PageObjects;
 
 
 
+import javax.tools.DocumentationTool.Location;
+
+import org.apache.commons.io.monitor.FileEntry;
+import org.apache.xmlbeans.UserType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,16 +59,16 @@ public class HomePage extends Testbase{
     	PageFactory.initElements(driver,this);
     }
 
-   public  Inventry inventory() throws Throwable
+   public  FileEntry inventory() throws Throwable
     {
-    	Utils1.moveToElement(Inventory);
+    	Utils.moveToElement(Inventory);
     	AllInventory.click();	 
-		return  new Inventry();
+		return  new FileEntry();
     }
 
    public   Movestock movestock() throws Throwable
     {
-    	Utils1.moveToElement(Inventory);
+    	Utils.moveToElement(Inventory);
     	Movestock.click();
 		return new Movestock();
 		 
@@ -74,39 +78,39 @@ public class HomePage extends Testbase{
  
  
   
-    	Utils1.moveToElement(master);
+    	Utils.moveToElement(master);
     	usertype.click();
 		return new UserType();
 	} 
 
 	public Holidays holidays() throws Throwable
 	{
-		Utils1.moveToElement(master);
+		Utils.moveToElement(master);
 		holidays.click();
 		return new Holidays();
 	}
 	
 	public void addcustomer()
 	{
-		Utils1.moveToElement(customer);
+		Utils.moveToElement(customer);
 		addcustomer.click();
 	}
 	public void editcustomer()
 	{
-		Utils1.moveToElement(customer);
+		Utils.moveToElement(customer);
 		allcustomer.click();
 	}
 
 	public  Location location() throws Throwable
 	{
-		Utils1.moveToElement(master);
+		Utils.moveToElement(master);
 		location.click();
 		return  new Location();
 	}
  
 	public Condition Condition()throws Throwable
 	{
-		Utils1.moveToElement(master);
+		Utils.moveToElement(master);
 		condition.click();
 		return new Condition();
   }
@@ -114,4 +118,4 @@ public class HomePage extends Testbase{
 
 
 
-}
+
