@@ -1,6 +1,6 @@
 package com.PageObjects;
 
-package com.PageObjects;
+
 
 
 import java.util.List;
@@ -43,17 +43,17 @@ public class Condition extends Testbase{
 		PageFactory.initElements(driver,this);
 	}
 	 JavascriptExecutor jse=(JavascriptExecutor)driver;
-	public  ConditionTypeData addCondition() throws Throwable {
+	public  Condition addCondition() throws Throwable {
 		 
 		 jse.executeScript("arguments[0].click()",addnew);
-		return new ConditionTypeData();
+		return new Condition();
 		 
 	}
-	public ConditionTypeData editCondition(String Conditionname) throws Throwable
+	public Condition editCondition(String Conditionname) throws Throwable
 	{
 		search.sendKeys(Conditionname);
 		 jse.executeScript("arguments[0].click()",edit);
-		return new ConditionTypeData();	
+		return new Condition();	
 	}
 	public Condition deleteCondition(String changedcname) throws Throwable
 	{
@@ -79,4 +79,4 @@ public class Condition extends Testbase{
 
 
 
-}
+
